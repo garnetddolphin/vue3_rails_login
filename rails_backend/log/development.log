@@ -48,3 +48,28 @@ Processing by UsersController#index as */*
 Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.7ms)
 
 
+Started POST "/auth" for ::1 at 2022-07-08 17:03:03 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ddolphin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/auth_controller.rb:11: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/auth_controller.rb:11: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/auth" for ::1 at 2022-07-08 17:06:55 +0900
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"admin@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:3
+Completed 201 Created in 75ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/auth" for ::1 at 2022-07-08 17:18:01 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ddolphin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"admin@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:3
+Completed 401 Unauthorized in 70ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
