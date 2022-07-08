@@ -73,3 +73,66 @@ Processing by AuthController#create as */*
 Completed 401 Unauthorized in 70ms (Views: 0.2ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/users" for ::1 at 2022-07-08 17:27:03 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ddolphin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/application_controller.rb:9:in `require_login'
+Started POST "/auth" for ::1 at 2022-07-08 17:29:19 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ddolphin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"admin@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 201 Created in 72ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 17:29:41 +0900
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/application_controller.rb:9:in `require_login'
+Started POST "/auth" for ::1 at 2022-07-08 17:33:18 +0900
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"admin@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 201 Created in 72ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 17:33:39 +0900
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."deleted_at" IS NULL[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 17:33:59 +0900
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 17:34:02 +0900
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."deleted_at" IS NULL[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
