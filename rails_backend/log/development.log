@@ -136,3 +136,387 @@ Processing by UsersController#index as */*
 Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms)
 
 
+Started POST "/auth" for ::1 at 2022-07-08 20:23:17 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ddolphin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"member@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"member@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "member@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 201 Created in 73ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:24:05 +0900
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant UsersController::Pudit):
+  
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for ::1 at 2022-07-08 20:24:30 +0900
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth" for ::1 at 2022-07-08 20:25:06 +0900
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"admin@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 201 Created in 71ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:25:22 +0900
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:25:50 +0900
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth" for ::1 at 2022-07-08 20:31:32 +0900
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"admin@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 201 Created in 77ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:31:57 +0900
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:35:26 +0900
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:36:53 +0900
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:40:25 +0900
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:41:16 +0900
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:41:21 +0900
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:42:06 +0900
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+hogehoge
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:42:19 +0900
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+{"user_id"=>"1", "role"=>"member"}
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth" for ::1 at 2022-07-08 20:42:52 +0900
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"admin@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 201 Created in 70ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth" for ::1 at 2022-07-08 20:43:03 +0900
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"admin@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 201 Created in 72ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:43:21 +0900
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+{"user_id"=>"1", "role"=>"member"}
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:47:00 +0900
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+{"user_id"=>"1", "role"=>"member"}
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth" for ::1 at 2022-07-08 20:47:43 +0900
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"admin@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 201 Created in 81ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/auth" for ::1 at 2022-07-08 20:47:47 +0900
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"admin@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 201 Created in 64ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:48:23 +0900
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+
+{"user_id"=>"1", "role"=>"member"}
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:48:51 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ddolphin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+
+{"user_id"=>"1", "role"=>"member"}
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth" for ::1 at 2022-07-08 20:49:10 +0900
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"admin@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 201 Created in 75ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:49:33 +0900
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+
+{"user_id"=>"1", "role"=>"member"}
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."deleted_at" IS NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "role", "password_digest", "register_user", "update_user", "activated_at", "created_at", "updated_at", "lock_version") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "admin"], ["email", "admin@example.com"], ["role", 1], ["password_digest", "$2a$10$HjQH2VBdguACJLyZHoVSs.yBZbwypqY3vUJGnxlWj94rmilWIuWzK"], ["register_user", 1], ["update_user", 1], ["activated_at", "2020-02-03 00:00:00"], ["created_at", "2022-07-08 11:52:20.888591"], ["updated_at", "2022-07-08 11:52:20.888591"], ["lock_version", 0]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "role", "password_digest", "register_user", "update_user", "activated_at", "created_at", "updated_at", "lock_version") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "member"], ["email", "member@example.com"], ["role", 0], ["password_digest", "$2a$10$HjQH2VBdguACJLyZHoVSs.yBZbwypqY3vUJGnxlWj94rmilWIuWzK"], ["register_user", 1], ["update_user", 1], ["activated_at", "2020-02-03 00:00:00"], ["created_at", "2022-07-08 11:52:20.892609"], ["updated_at", "2022-07-08 11:52:20.892609"], ["lock_version", 0]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "role" integer, "password_digest" varchar, "register_user" integer, "update_user" integer, "lock_version" integer, "activated_at" datetime, "deleted_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220708074140)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-07-08 11:52:51.893666"], ["updated_at", "2022-07-08 11:52:51.893666"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "role" integer, "password_digest" varchar, "register_user" integer, "update_user" integer, "lock_version" integer, "activated_at" datetime, "deleted_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220708074140)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-07-08 11:52:51.907956"], ["updated_at", "2022-07-08 11:52:51.907956"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2022-07-08 11:52:51.910796"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "role", "password_digest", "register_user", "update_user", "activated_at", "created_at", "updated_at", "lock_version") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "admin"], ["email", "admin@example.com"], ["role", 1], ["password_digest", "$2a$10$HjQH2VBdguACJLyZHoVSs.yBZbwypqY3vUJGnxlWj94rmilWIuWzK"], ["register_user", 1], ["update_user", 1], ["activated_at", "2020-02-03 00:00:00"], ["created_at", "2022-07-08 11:52:51.931915"], ["updated_at", "2022-07-08 11:52:51.931915"], ["lock_version", 0]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "role", "password_digest", "register_user", "update_user", "activated_at", "created_at", "updated_at", "lock_version") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "member"], ["email", "member@example.com"], ["role", 0], ["password_digest", "$2a$10$HjQH2VBdguACJLyZHoVSs.yBZbwypqY3vUJGnxlWj94rmilWIuWzK"], ["register_user", 1], ["update_user", 1], ["activated_at", "2020-02-03 00:00:00"], ["created_at", "2022-07-08 11:52:51.935252"], ["updated_at", "2022-07-08 11:52:51.935252"], ["lock_version", 0]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "role", "password_digest", "register_user", "update_user", "activated_at", "created_at", "updated_at", "lock_version") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "admin"], ["email", "admin@example.com"], ["role", 1], ["password_digest", "$2a$10$HjQH2VBdguACJLyZHoVSs.yBZbwypqY3vUJGnxlWj94rmilWIuWzK"], ["register_user", 1], ["update_user", 1], ["activated_at", "2020-02-03 00:00:00"], ["created_at", "2022-07-08 11:53:18.778677"], ["updated_at", "2022-07-08 11:53:18.778677"], ["lock_version", 0]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "role", "password_digest", "register_user", "update_user", "activated_at", "created_at", "updated_at", "lock_version") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "member"], ["email", "member@example.com"], ["role", 0], ["password_digest", "$2a$10$HjQH2VBdguACJLyZHoVSs.yBZbwypqY3vUJGnxlWj94rmilWIuWzK"], ["register_user", 1], ["update_user", 1], ["activated_at", "2020-02-03 00:00:00"], ["created_at", "2022-07-08 11:53:18.782021"], ["updated_at", "2022-07-08 11:53:18.782021"], ["lock_version", 0]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."deleted_at" IS NULL[0m
+Started POST "/auth" for ::1 at 2022-07-08 20:54:39 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ddolphin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/ddolphin/Desktop/vue3_rails_login/rails_backend/app/controllers/application_controller.rb:3)
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"admin@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 201 Created in 76ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:55:05 +0900
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+
+{"user_id"=>"1", "role"=>"admin"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."deleted_at" IS NULL[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/auth" for ::1 at 2022-07-08 20:55:46 +0900
+Processing by AuthController#create as */*
+  Parameters: {"email"=>"member@example.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"member@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? LIMIT ?[0m  [["email", "member@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 201 Created in 64ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2022-07-08 20:56:05 +0900
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+
+{"user_id"=>"2", "role"=>"member"}
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+

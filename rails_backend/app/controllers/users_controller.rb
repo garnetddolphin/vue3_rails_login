@@ -3,9 +3,8 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all
-
-    render json: @users
+    users = authorize Pundit.policy_scope(@session, User)
+    render json: users
   end
 
   # GET /users/1
